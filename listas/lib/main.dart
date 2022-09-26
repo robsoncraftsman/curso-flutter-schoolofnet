@@ -17,7 +17,9 @@ class ListApp extends StatelessWidget {
             backgroundColor: Colors.brown,
             centerTitle: true,
           ),
-          body: ListView.builder(
+          body: ListView.separated(
+              separatorBuilder: (context, index) =>
+                  const Divider(color: Colors.brown),
               itemCount: veiculos.length,
               itemBuilder: (BuildContext context, index) {
                 return ListTile(
